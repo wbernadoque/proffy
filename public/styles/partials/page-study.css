@@ -136,6 +136,24 @@
     margin:12rem auto;
     text-align: center;
 }
+.teacher-item .weekday-classes{
+    margin-top: 32px;
+    
+    width:100%;
+}
+.teacher-item .weekday-classes .weekday-class{
+    width:122px;
+    height: 136px;
+    padding-left: 15px;
+    margin-left: 10px;;
+    background:var(--color-box-footer);
+    border-radius:8px;
+    border:1px solid var(--color-line-in-write);
+}
+
+.teacher-item .weekday-classes .weekday-class p{
+margin-top: 14px;
+}
 
 @media(min-width:700px){
     #page-study #container{
