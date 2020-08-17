@@ -80,59 +80,41 @@
                         </header>
                     
                         <p>{{proffy.bio}}</p>
+
                         <div class="weekday-classes">
-                            <div class="weekday-class">
+                            
+                            {%for weekday in weekdays %}
+                             {%if proffy ==""%}
+                             <div class="no-weekday-class">
                                 <p>dia</p>
-                                <strong>domingo</strong>
+                                <strong>{{weekday}}</strong>
                                 <p>Horário</p>
                                 <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Segunda</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Terça</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Quarta</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Quinta</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Sexta</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
-                            <div class="weekday-class">
-                                <p>dia</p>
-                                <strong>Sabado</strong>
-                                <p>Horário</p>
-                                <strong>8h - 16h</strong>
-                            </div>
+                             </div> 
+                             {%else%}
+                                <div class="weekday-class">
+                                    <p>dia</p>
+                                    <strong>{{weekday}}</strong>
+                                    <p>Horário</p>
+                                    <strong>8h - 16h</strong>
+                                
+                                </div>
+                                {%endif%}
+                                {%endfor%}
+                            
                         </div>
+                        
                         <footer>
                             <p>Preço/hora<strong>R$ {{proffy.cost}}</strong>
+                             
                             </p> 
-                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho Interesse na sua Aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank"> 
+                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55 {{proffy.whatsapp}}&text=Tenho Interesse na sua Aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank"> 
                                 <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
                             </a>
+                            {%endfor%}        
                         </footer>
                     </article>
-                {%endfor%}
+                
             
             {% endif %}
             

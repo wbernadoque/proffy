@@ -211,6 +211,15 @@ margin-top: 14px;
         width:100%;
         padding-right: 10px;
         flex-wrap: nowrap;
+        
+    }
+    .teacher-item .no-weekday-classes{
+        margin-top: 32px;
+        display:flex;
+        width:100%;
+        padding-right: 10px;
+        flex-wrap: nowrap;
+        opacity: 40%;
     }
     .teacher-item .weekday-classes .weekday-class{
         

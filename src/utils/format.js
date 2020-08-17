@@ -13,11 +13,11 @@ const subjects = [
 
 const weekdays = [
     "Domingo",
-    "Segunda-Feira",
-    "Terça-Feira",
-    "Quarta-Feira",
-    "Quinta-Feira",
-    "Sexta-Feira",
+    "Segunda",
+    "Terça",
+    "Quarta",
+    "Quinta",
+    "Sexta",
     "Sábado",
 ]
 
